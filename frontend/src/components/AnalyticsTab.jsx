@@ -11,7 +11,7 @@ const AnalyticsTab = () => {
 		totalSales: 0,
 		totalRevenue: 0,
 	});
-  const [isLoading, setIsLoading] = useState(true);
+  const [ setIsLoading] = useState(true);
 	const [dailySalesData, setDailySalesData] = useState([]);
 
 	useEffect(() => {
