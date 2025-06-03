@@ -35,9 +35,10 @@ if (process.env.NODE_ENV === "production") {
 	if (fs.existsSync(distPath)) {
 		app.use(express.static(distPath));
 
-		app.get("*", (req, res) => {
+		app.get("/{*splat}", (req, res) => {
 			res.sendFile(path.resolve(distPath, "index.html"));
 		});
+
 	} else {
 		console.warn("Frontend build folder not found:", distPath);
 	}
